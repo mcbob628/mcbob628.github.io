@@ -13,6 +13,14 @@
 function myFunction() {
     var str = document.getElementById("srcCode").value;
     var posit = str.indexOf("http://apps.facebook.com/mobwars/jobs/do.php?action=heist_help&job_help_id=");
-    document.getElementById("result").innerHTML = posit;
+    var posit2 = str.indexOf("&user_id=");
+    var helpIdStart = posit + 75 ;
+    var posit3 = str.indexOf("&mw_ref=feed_heist_help_v2");
+    var helpId = srcCode.substring(helpIdStart, posit2);
+    
+    
+    
+    
+    document.getElementById("result").innerHTML = helpId;
 }
 </script>
