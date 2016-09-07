@@ -2,9 +2,17 @@
 <html>
 <body>
   <h1>NewPage</h1>
+  <button onclick="myFunction()">find my links</button>
+  <p id="result"></p>
   <textarea id="srcCode" rows="50" cols="50">
   </textarea>
-  <button onclick="myFunction()">find my links</button>
-<p>Here lies a page.</p>
+<p>Here lies a page </p>
 </body>
 </html>
+<script>
+function myFunction() {
+    var str = document.getElementById("srcCode").value;
+    var posit = str.indexOf("http://apps.facebook.com/mobwars/jobs/do.php?action=heist_help&job_help_id=");
+    document.getElementById("result").innerHTML = posit;
+}
+</script>
