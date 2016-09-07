@@ -3,10 +3,10 @@
 <body>
   <h1>NewPage</h1>
   <button onclick="myFunction()">find my links</button>
-  <p id="result"></p>
-  <textarea id="srcCode" rows="50" cols="50">
+  <textarea id="srcCode" rows="20" cols="50">
   </textarea>
 <p>Here lies a page </p>
+<p id="result"></p>
 </body>
 </html>
 <script>
@@ -14,13 +14,9 @@ function myFunction() {
     var str = document.getElementById("srcCode").value;
     var posit = str.indexOf("http://apps.facebook.com/mobwars/jobs/do.php?action=heist_help&job_help_id=");
     var posit2 = str.indexOf("&user_id=");
-    var helpIdStart = posit + 75 ;
+    var helpIdStart = posit+75;
     var posit3 = str.indexOf("&mw_ref=feed_heist_help_v2");
     var helpId = srcCode.substring(helpIdStart, posit2);
-    
-    
-    
-    
     document.getElementById("result").innerHTML = helpId;
 }
 </script>
